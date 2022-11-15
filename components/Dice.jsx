@@ -65,9 +65,15 @@ export default class Dice extends Component {
 		}
 
 		return (
-			<Pressable onPress={() => {this.rollDice()}}>
+			<Pressable onPress={() => {!this.props.disableTouchSpinn && this.rollDice()}}>
 				<Animated.View style={frontAnimatedStyle}>
-					<DiceResult faceNumber={this.state.faceNumber} width={100} height={100} backgroundColor={'#232323'} tintColor={'#0e8c3b'}/>
+					<DiceResult
+						faceNumber={this.state.faceNumber}
+						width={90}
+						height={90}
+						backgroundColor={this.props.backgroundColor}
+						tintColor={this.props.tintColor}
+					/>
 				</Animated.View>
 			</Pressable>
 		);

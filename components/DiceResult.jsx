@@ -15,7 +15,7 @@ export default function DiceResult(props) {
 		<View style={{ backgroundColor: props.backgroundColor, borderRadius: 10, alignSelf: 'baseline' }}>
 			<Image
 				style={{ width: props.width, height: props.height, tintColor: props.tintColor }}
-				source={faces[(props.faceNumber - 1) % 6]}
+				source={faces[(Math.abs(props.faceNumber - 1)) % 6]}
 			/>
 		</View>
 	);
