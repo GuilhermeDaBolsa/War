@@ -17,4 +17,4 @@ For each step of the battle that you lose, you also lose an army.
 The app shows the battle result illustrating the number of armies each one lost.
 
 
-![example](https://user-images.githubusercontent.com/39105309/202024836-e8a47cff-1726-4cdb-82c2-fd830c34f95e.gif)
+![example2](https://user-images.githubusercontent.com/39105309/202051408-ea5f1085-6cce-4c83-9a8a-fa5085eeda3e.gif)
