@@ -7,9 +7,9 @@ It gives the attacker as well as the defensor 3 dices.
 You can mannualy roll any dice (it does nothing besides giving you a 1 - 6 random side of the dice).
 Or you can enter a battle. In a battle all the 6 dices are rolled and then the values are compared as so:
 
-the attacker's greater dice with the defensor's greater dice
-the attacker's 'medium' dice with the defensor's 'medium' dice
-the attacker's smallest dice with the defensor's smallest dice
+  - the attacker's greater dice with the defensor's greater dice
+  - the attacker's 'medium' dice with the defensor's 'medium' dice
+  - the attacker's smallest dice with the defensor's smallest dice
 
 The defensor's win if his dice is greater or equals the attacker's dice, otherwise the attacker win.
 
