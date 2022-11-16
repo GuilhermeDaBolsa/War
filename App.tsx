@@ -17,22 +17,22 @@ export default function App() {
 
 	const [disableBattle, setDisableBattle] = useState(false);
 
-	const attackerDices = Array.from(Array(3).keys()).map(e => {
+	const attackerDices = Array.from(Array(resultLabels.length).keys()).map(e => {
 		const [spinForce, setSpinForce] = useState(generateRandomDiceSpinForce());
 		const [faceOnTop, setFaceOnTop] = useState(0);
 		return { key: e, childRef: useRef(null), spinForce, setSpinForce, faceOnTop, setFaceOnTop }
 	})
 
-	const defensorDices = Array.from(Array(3).keys()).map(e => {
+	const defensorDices = Array.from(Array(resultLabels.length).keys()).map(e => {
 		const [spinForce, setSpinForce] = useState(generateRandomDiceSpinForce());
 		const [faceOnTop, setFaceOnTop] = useState(0);
-		return { key: e + 3, childRef: useRef(null), spinForce, setSpinForce, faceOnTop, setFaceOnTop }
+		return { key: e + resultLabels.length, childRef: useRef(null), spinForce, setSpinForce, faceOnTop, setFaceOnTop }
 	})
 
-	const diceBattleResults = Array.from(Array(3).keys()).map(e => {
+	const diceBattleResults = Array.from(Array(resultLabels.length).keys()).map(e => {
 		const [attakerResult, setAttakerResult] = useState(0);
 		const [defensorResult, setDefensorResult] = useState(0);
-		return { key: e + 6, label: resultLabels[e], attakerResult, setAttakerResult, defensorResult, setDefensorResult }
+		return { key: e + resultLabels.length * 2, label: resultLabels[e], attakerResult, setAttakerResult, defensorResult, setDefensorResult }
 	})
 
 	
@@ -40,7 +40,7 @@ export default function App() {
 	function battle() {
 		if(!isBattleling && !disableBattle) {
 			setDisableBattle(true);
-			setIsBattleling(6);
+			setIsBattleling(attackerDices.length + defensorDices.length);
 
 			attackerDices.forEach((e, i) => setTimeout(() => battleRoll(e), i * 500) )
 			defensorDices.forEach((e, i) => setTimeout(() => battleRoll(e), i * 500) )
