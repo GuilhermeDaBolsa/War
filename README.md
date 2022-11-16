@@ -1,6 +1,6 @@
 # War (School Project)
 
-War is a Reac Native App that replaces the dices used in War table game.
+War is a React Native App that replaces the dices used in War table game.
 
 It gives the attacker as well as the defensor 3 dices.
 
